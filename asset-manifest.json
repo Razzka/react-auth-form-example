@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Razzka/react-auth-form-example/static/css/main.08f9b881.css",
-    "main.js": "/Razzka/react-auth-form-example/static/js/main.6bcc2254.js",
-    "index.html": "/Razzka/react-auth-form-example/index.html",
-    "main.08f9b881.css.map": "/Razzka/react-auth-form-example/static/css/main.08f9b881.css.map",
-    "main.6bcc2254.js.map": "/Razzka/react-auth-form-example/static/js/main.6bcc2254.js.map"
+    "main.css": "/react-auth-form-example/static/css/main.08f9b881.css",
+    "main.js": "/react-auth-form-example/static/js/main.6bcc2254.js",
+    "index.html": "/react-auth-form-example/index.html",
+    "main.08f9b881.css.map": "/react-auth-form-example/static/css/main.08f9b881.css.map",
+    "main.6bcc2254.js.map": "/react-auth-form-example/static/js/main.6bcc2254.js.map"
   },
   "entrypoints": [
     "static/css/main.08f9b881.css",
