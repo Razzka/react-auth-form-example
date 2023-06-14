@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './Layout';
+import { HomePage } from './pages/HomePage';
+import { RegisterPage } from './pages/RegisterPage';
+import { PasswordPage } from './pages/PasswordPage';
+import { CodePage } from './pages/CodePage';
+import { SuccessPage } from './pages/SuccessPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" index element={<HomePage />} />
+        <Route path="/react-auth-form-example" index element={<HomePage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/password" element={<PasswordPage />} />
+        <Route path="/code" element={<CodePage />} />
+        <Route path="/success" element={<SuccessPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
