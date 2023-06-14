@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-auth-form-example/static/css/main.12df0d91.css",
-    "main.js": "/react-auth-form-example/static/js/main.ead31799.js",
+    "main.css": "/react-auth-form-example/static/css/main.9157ee93.css",
+    "main.js": "/react-auth-form-example/static/js/main.41f83dc6.js",
     "index.html": "/react-auth-form-example/index.html",
-    "main.12df0d91.css.map": "/react-auth-form-example/static/css/main.12df0d91.css.map",
-    "main.ead31799.js.map": "/react-auth-form-example/static/js/main.ead31799.js.map"
+    "main.9157ee93.css.map": "/react-auth-form-example/static/css/main.9157ee93.css.map",
+    "main.41f83dc6.js.map": "/react-auth-form-example/static/js/main.41f83dc6.js.map"
   },
   "entrypoints": [
-    "static/css/main.12df0d91.css",
-    "static/js/main.ead31799.js"
+    "static/css/main.9157ee93.css",
+    "static/js/main.41f83dc6.js"
   ]
 }
