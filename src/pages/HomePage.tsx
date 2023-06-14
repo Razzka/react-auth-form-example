@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../AppContext';
-import { checkEmailValid, sleep } from '../utils';
+import { checkEmailValid } from '../utils';
 import formStyles from '../form.module.css';
 import cn from 'classnames';
 import { checkUserExists } from '../authorizationProvider/auth';
@@ -37,11 +37,9 @@ export const HomePage: React.FC = () => {
       inputRef?.current?.focus();
       setError('Incorrect Email');
     } else if (!(await checkUserExists(email))) {
-      await sleep(1000);
       setError('Email not found, wanna register first?');
       buttonRef?.current?.focus();
     } else {
-      await sleep(1000);
       navigate('/password');
     }
 

@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs';
+import sha256 from 'crypto-js/sha256';
 
 export const checkEmailValid = (email: string) => {
   const dotIndex = email.indexOf('@');
@@ -6,8 +6,7 @@ export const checkEmailValid = (email: string) => {
 };
 
 export const hashPassword = async (password: string) => {
-  const saltRounds = 10;
-  return bcrypt.hash(password, saltRounds);
+  return sha256(password).toString();
 };
 
 export function sleep(ms: number) {

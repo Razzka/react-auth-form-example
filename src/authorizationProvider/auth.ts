@@ -1,5 +1,7 @@
 // Mocking authorization in local storage
 
+import {sleep} from "../utils";
+
 const LOCAL_STORAGE_KEY = 'AUTH_MOCK';
 
 const tryParse = (): Record<string, string> => {
@@ -15,6 +17,7 @@ let passwords: Record<string, string> = tryParse();
 type EmailAndPassword = { email: string; password: string };
 
 export const checkUserExists = async (email: string) => {
+  await sleep(1000);
   const lowerCaseEmail = email.toLowerCase();
   return passwords[lowerCaseEmail] !== undefined;
 };
@@ -24,10 +27,12 @@ export const logout = async () => {
 };
 
 export const checkCodeValid = async (code: string) => {
+  await sleep(1000);
   return code === '1234';
 };
 
 export const register = async ({ email, password }: EmailAndPassword) => {
+  await sleep(1000);
   const lowerCaseEmail = email.toLowerCase();
   if (passwords[lowerCaseEmail] === undefined) {
     passwords[lowerCaseEmail] = password;
@@ -40,5 +45,6 @@ export const register = async ({ email, password }: EmailAndPassword) => {
 
 export const tryLogin = async ({ email, password }: EmailAndPassword) => {
   const lowerCaseEmail = email.toLowerCase();
+  await sleep(1000);
   return passwords[lowerCaseEmail] === password;
 };

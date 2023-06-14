@@ -5,7 +5,7 @@ import { checkUserExists, register } from '../authorizationProvider/auth';
 import formStyles from '../form.module.css';
 import cn from 'classnames';
 import { ExclamationIcon } from '../icons/ExclamationIcon';
-import { checkEmailValid, hashPassword, sleep } from '../utils';
+import { checkEmailValid, hashPassword } from '../utils';
 
 export const RegisterPage: React.FC = () => {
   const { email, setEmail } = useContext(AppContext);
@@ -47,7 +47,6 @@ export const RegisterPage: React.FC = () => {
 
     const registered = await register({ email, password: hashedPassword });
 
-    await sleep(1000);
     if (registered) {
       setRedirecting(true);
       setTimeout(() => {

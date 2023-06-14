@@ -5,7 +5,7 @@ import { tryLogin } from '../authorizationProvider/auth';
 import formStyles from '../form.module.css';
 import { ExclamationIcon } from '../icons/ExclamationIcon';
 import cn from 'classnames';
-import { hashPassword, sleep } from '../utils';
+import { hashPassword } from '../utils';
 
 export const PasswordPage = () => {
   const navigate = useNavigate();
@@ -49,7 +49,6 @@ export const PasswordPage = () => {
     } else {
       const hashedPassword = await hashPassword(password);
       const passwordValid = await tryLogin({ email, password: hashedPassword });
-      await sleep(1000);
       if (passwordValid) {
         navigate('/success');
       } else {
