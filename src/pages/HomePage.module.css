@@ -1,0 +1,8 @@
+.bigLogo {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 24px;
+}

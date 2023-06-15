@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import formStyles from '../form.module.css';
+import formStyles from './form.module.css';
 
 export const NotFoundPage = () => {
   const navigate = useNavigate();

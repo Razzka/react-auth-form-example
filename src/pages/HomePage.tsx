@@ -2,7 +2,8 @@ import React, { useContext, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../AppContext';
 import { checkEmailValid } from '../utils';
-import formStyles from '../form.module.css';
+import formStyles from './form.module.css';
+import homePageStyles from './HomePage.module.css';
 import cn from 'classnames';
 import { checkUserExists } from '../authorizationProvider/auth';
 import { ExclamationIcon } from '../icons/ExclamationIcon';
@@ -50,7 +51,7 @@ export const HomePage: React.FC = () => {
     <div>
       <h1>Welcome to Razzka's!</h1>
 
-      <div className={formStyles.bigLogo}>
+      <div className={homePageStyles.bigLogo}>
         <Logo />
       </div>
 

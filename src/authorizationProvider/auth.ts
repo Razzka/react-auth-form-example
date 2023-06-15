@@ -1,16 +1,20 @@
 // Mocking authorization in local storage
 
-import {sleep} from "../utils";
-
 const LOCAL_STORAGE_KEY = 'AUTH_MOCK';
 
 const tryParse = (): Record<string, string> => {
   try {
     return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '');
   } catch {
-    return {};
+    return {
+      a: 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb'
+    };
   }
 };
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 let passwords: Record<string, string> = tryParse();
 

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { AppContext } from '../AppContext';
 import { checkCodeValid } from '../authorizationProvider/auth';
-import formStyles from '../form.module.css';
+import formStyles from './form.module.css';
 import { ExclamationIcon } from '../icons/ExclamationIcon';
 import cn from "classnames";
 

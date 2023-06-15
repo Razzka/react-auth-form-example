@@ -8,7 +8,3 @@ export const checkEmailValid = (email: string) => {
 export const hashPassword = async (password: string) => {
   return sha256(password).toString();
 };
-
-export function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}

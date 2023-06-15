@@ -2,7 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { AppContext } from '../AppContext';
 import { tryLogin } from '../authorizationProvider/auth';
-import formStyles from '../form.module.css';
+import formStyles from './form.module.css';
+import passwordPageStyles from './PasswordPage.module.css';
 import { ExclamationIcon } from '../icons/ExclamationIcon';
 import cn from 'classnames';
 import { hashPassword } from '../utils';
@@ -77,10 +78,10 @@ export const PasswordPage = () => {
             onChange={handlePasswordChange}
           />
         </label>
-        <label className={formStyles.checkbox_label}>
+        <label className={passwordPageStyles.checkbox_label}>
           <input
             type="checkbox"
-            className={formStyles.checkbox}
+            className={passwordPageStyles.checkbox}
             checked={showPassword}
             onChange={handleShowPasswordChange}
             aria-description="Toggle password visibility"
@@ -103,13 +104,13 @@ export const PasswordPage = () => {
           </button>
 
           <button
-            className={cn(formStyles.link, formStyles.onlyDesktop)}
+            className={cn(formStyles.link, passwordPageStyles.onlyDesktop)}
             type="button"
             tabIndex={3}
             aria-description="Request one-time code by email"
             onClick={handleRequestCodeClick}
           >
-            Log in using a one-time code
+            Request one-time code
           </button>
           <button
             tabIndex={2}
@@ -122,13 +123,13 @@ export const PasswordPage = () => {
           </button>
         </div>
         <button
-          className={cn(formStyles.link, formStyles.onlyBrowser)}
+          className={cn(formStyles.link, passwordPageStyles.onlyBrowser)}
           type="button"
           aria-description="Request one-time code by email"
           tabIndex={3}
           onClick={handleRequestCodeClick}
         >
-          Log in using a one-time code
+          Request one-time code
         </button>
       </form>
     </div>

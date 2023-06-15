@@ -2,7 +2,8 @@ import React, { useContext, useRef, useState } from 'react';
 import { AppContext } from '../AppContext';
 import { useNavigate } from 'react-router-dom';
 import { checkUserExists, register } from '../authorizationProvider/auth';
-import formStyles from '../form.module.css';
+import formStyles from './form.module.css';
+import registerStyles from './RegisterPage.module.css'
 import cn from 'classnames';
 import { ExclamationIcon } from '../icons/ExclamationIcon';
 import { checkEmailValid, hashPassword } from '../utils';
@@ -89,7 +90,7 @@ export const RegisterPage: React.FC = () => {
       <div>
         <h1>Success</h1>
         <p>Successfully registered. Use new credentials to Log In.</p>
-        <p className={formStyles.additional_info}>
+        <p className={registerStyles.additional_info}>
           You will be redirected to login page shortly. If it doesn't, click{' '}
           <button className={formStyles.link} onClick={handleToLogin}>
             here
