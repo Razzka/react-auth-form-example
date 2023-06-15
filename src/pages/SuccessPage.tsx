@@ -17,7 +17,7 @@ export const SuccessPage = () => {
     <div>
       <h1>Successfully Authorized!</h1>
 
-      <button className={formStyles.button_primary} onClick={handleLogout}>
+      <button aria-description="Log out and navigate to main page" className={formStyles.button_primary} onClick={handleLogout}>
         Logout
       </button>
     </div>

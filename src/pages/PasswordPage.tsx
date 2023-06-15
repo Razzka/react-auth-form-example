@@ -68,9 +68,12 @@ export const PasswordPage = () => {
             tabIndex={1}
             ref={inputRef}
             autoFocus
-            className={formStyles.input}
+            className={cn(formStyles.input, {
+              [formStyles.invalid]: error,
+            })}
             type={showPassword ? 'text' : 'password'}
             value={password}
+            aria-description="Enter password in this field"
             onChange={handlePasswordChange}
           />
         </label>
@@ -80,6 +83,7 @@ export const PasswordPage = () => {
             className={formStyles.checkbox}
             checked={showPassword}
             onChange={handleShowPasswordChange}
+            aria-description="Toggle password visibility"
           />{' '}
           Show password
         </label>
@@ -92,6 +96,7 @@ export const PasswordPage = () => {
             tabIndex={4}
             className={formStyles.button_secondary}
             type="button"
+            aria-description="Navigate to main page"
             onClick={handleChangeEmailClick}
           >
             Change Email
@@ -101,6 +106,7 @@ export const PasswordPage = () => {
             className={cn(formStyles.link, formStyles.onlyDesktop)}
             type="button"
             tabIndex={3}
+            aria-description="Request one-time code by email"
             onClick={handleRequestCodeClick}
           >
             Log in using a one-time code
@@ -110,6 +116,7 @@ export const PasswordPage = () => {
             className={formStyles.button_primary}
             disabled={submitting}
             type="submit"
+            aria-description="Submit the password to authenticate"
           >
             Submit
           </button>
@@ -117,6 +124,7 @@ export const PasswordPage = () => {
         <button
           className={cn(formStyles.link, formStyles.onlyBrowser)}
           type="button"
+          aria-description="Request one-time code by email"
           tabIndex={3}
           onClick={handleRequestCodeClick}
         >

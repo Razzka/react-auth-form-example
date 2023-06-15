@@ -48,19 +48,19 @@ export const HomePage: React.FC = () => {
 
   return (
     <div>
-      <h1>Welcome to Razzka's Site!</h1>
+      <h1>Welcome to Razzka's!</h1>
 
       <div className={formStyles.bigLogo}>
         <Logo />
       </div>
 
-      <p>Authorize to proceed</p>
       <form noValidate onSubmit={handleSubmit} className={formStyles.form}>
         <label className={formStyles.label}>
           Email
           <input
+              aria-description="Enter email in this field"
             tabIndex={1}
-            autoFocus
+            autoFocus={!email}
             className={cn(formStyles.input, {
               [formStyles.invalid]: !isEmailValid,
             })}
@@ -83,6 +83,7 @@ export const HomePage: React.FC = () => {
             className={formStyles.button_secondary}
             type="button"
             ref={buttonRef}
+            aria-description="Navigate to Registration page"
             onClick={handleRegister}
           >
             Register
@@ -91,9 +92,11 @@ export const HomePage: React.FC = () => {
             tabIndex={2}
             className={formStyles.button_primary}
             disabled={submitting}
+            autoFocus={!!email}
+            aria-description="Submit email to authenticate"
             type="submit"
           >
-            Next
+            Login
           </button>
         </div>
       </form>

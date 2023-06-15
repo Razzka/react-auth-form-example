@@ -4,6 +4,7 @@ import { AppContext } from '../AppContext';
 import { checkCodeValid } from '../authorizationProvider/auth';
 import formStyles from '../form.module.css';
 import { ExclamationIcon } from '../icons/ExclamationIcon';
+import cn from "classnames";
 
 export const CodePage = () => {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ export const CodePage = () => {
 
   return (
     <div>
-      <h1>Code has been sent by Email {email}</h1>
+      <h1>Code has been sent by email</h1>
       <form onSubmit={handleSubmit} className={formStyles.form}>
         <label className={formStyles.label}>
           Code
@@ -55,9 +56,12 @@ export const CodePage = () => {
             ref={inputRef}
             tabIndex={1}
             autoFocus
-            className={formStyles.input}
+            className={cn(formStyles.input, {
+              [formStyles.invalid]: error,
+            })}
             type="number"
             value={code}
+            aria-description="Enter code from email in this field"
             onChange={handleCodeChange}
           />
         </label>
@@ -68,14 +72,16 @@ export const CodePage = () => {
         <div className={formStyles.buttons}>
           <button
             tabIndex={3}
+            aria-description="Navigate to Password enter page"
             className={formStyles.button_secondary}
             type="button"
             onClick={handlePassword}
           >
-            Back to Enter Password
+            Enter Password
           </button>
           <button
             tabIndex={2}
+            aria-description="Submit the code to authenticate"
             className={formStyles.button_primary}
             type="submit"
             disabled={submitting}

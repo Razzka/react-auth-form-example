@@ -2,16 +2,7 @@
   text-align: center;
 }
 
-.logo {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 16px;
-  top: 16px;
-}
-
 .content {
-  padding-top: 16px;
   margin-top: 8px;
 }
 
@@ -24,8 +15,7 @@
     transform: translate(-50%, -50%);
     border: 1px solid #aaaaaa;
     border-radius: 8px;
-    padding-top: 40px;
     padding-bottom: 24px;
-    min-width: 768px;
+    min-width: 600px;
   }
 }

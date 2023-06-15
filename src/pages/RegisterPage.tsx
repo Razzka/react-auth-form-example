@@ -111,11 +111,12 @@ export const RegisterPage: React.FC = () => {
           onBlur={handleEmailBlur}
           required
           ref={emailInputRef}
-          autoFocus
+          autoFocus={!email}
           autoComplete="username"
           className={cn(formStyles.input, {
             [formStyles.invalid]: !isEmailValid,
           })}
+          aria-description="Enter email in this field"
           tabIndex={1}
         />
       </label>
@@ -128,7 +129,9 @@ export const RegisterPage: React.FC = () => {
           onChange={handlePasswordChange}
           onBlur={handlePasswordBlur}
           required
+          autoFocus={!!email}
           autoComplete="current-password"
+          aria-description="Enter password in this field"
           className={cn(formStyles.input, {
             [formStyles.invalid]: !isPasswordValid,
           })}
@@ -143,6 +146,7 @@ export const RegisterPage: React.FC = () => {
         <button
           tabIndex={4}
           type="button"
+          aria-description="Navigate to main page"
           className={formStyles.button_secondary}
           onClick={handleToLogin}
         >
@@ -151,10 +155,11 @@ export const RegisterPage: React.FC = () => {
         <button
           tabIndex={3}
           type="submit"
+          aria-description="Submit the registration info"
           disabled={submitting}
           className={formStyles.button_primary}
         >
-          Next
+          Register
         </button>
       </div>
     </form>

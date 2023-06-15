@@ -11,7 +11,11 @@ export const NotFoundPage = () => {
     <div>
       <h1>Not Found</h1>
 
-      <button className={formStyles.button_primary} onClick={handleToMainPage}>
+      <button
+          aria-description="Navigate to main page"
+          className={formStyles.button_primary}
+          onClick={handleToMainPage}
+      >
         To Main Page
       </button>
     </div>
