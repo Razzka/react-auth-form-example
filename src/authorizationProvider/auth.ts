@@ -7,7 +7,7 @@ const tryParse = (): Record<string, string> => {
     return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '');
   } catch {
     return {
-      a: 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb'
+      'a@a': 'ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb'
     };
   }
 };

@@ -81,6 +81,7 @@ export const PasswordPage = () => {
         <label className={passwordPageStyles.checkbox_label}>
           <input
             type="checkbox"
+            tabIndex={2}
             className={passwordPageStyles.checkbox}
             checked={showPassword}
             onChange={handleShowPasswordChange}
@@ -94,7 +95,7 @@ export const PasswordPage = () => {
         </div>
         <div className={formStyles.buttons}>
           <button
-            tabIndex={4}
+            tabIndex={5}
             className={formStyles.button_secondary}
             type="button"
             aria-description="Navigate to main page"
@@ -106,14 +107,14 @@ export const PasswordPage = () => {
           <button
             className={cn(formStyles.link, passwordPageStyles.onlyDesktop)}
             type="button"
-            tabIndex={3}
+            tabIndex={4}
             aria-description="Request one-time code by email"
             onClick={handleRequestCodeClick}
           >
             Request one-time code
           </button>
           <button
-            tabIndex={2}
+            tabIndex={3}
             className={formStyles.button_primary}
             disabled={submitting}
             type="submit"
