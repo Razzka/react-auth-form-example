@@ -6,16 +6,11 @@
   "homepage": "https://Razzka.github.io/react-auth-form-example",
   "repository": "https://github.com/Razzka/react-auth-form-example",
   "dependencies": {
-    "@types/node": "^16.18.36",
-    "@types/react": "^18.2.12",
-    "@types/react-dom": "^18.2.5",
     "classnames": "^2.3.2",
     "crypto-js": "^4.1.1",
-    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.1",
-    "react-scripts": "5.0.1",
     "typescript": "^4.9.5"
   },
   "scripts": {
@@ -47,6 +42,11 @@
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",
     "eslint-config-prettier": "^8.8.0",
-    "prettier": "^2.8.8"
+    "@types/node": "^16.18.36",
+    "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5",
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.8.8",
+    "react-scripts": "5.0.1"
   }
 }
